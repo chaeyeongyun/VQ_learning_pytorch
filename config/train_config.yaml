@@ -1,0 +1,19 @@
+wandb_logging: false
+backbone: 
+  name: resnet50
+
+resize: 512
+
+train:
+  data_dir: /content/data/semi_sup_data/CWFID/num30/train/input
+  save_dir: /content/drive/MyDrive/self_supservised/CWFID
+  save_img: true
+  half: true
+  num_epochs: 400
+  batch_size: 4
+  learning_rate : 1e-4
+  device: 0
+
+vector_quantizer:
+  dim: 2048
+  codebook_size: 512
